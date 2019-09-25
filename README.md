@@ -1,0 +1,1 @@
+# shinkansen_bot
