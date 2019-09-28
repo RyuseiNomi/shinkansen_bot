@@ -1,6 +1,7 @@
 package text
 
 import (
+	"fmt"
 	"math/rand"
 	"time"
 )
@@ -11,6 +12,9 @@ func GetTweetText() string {
 	}
 
 	rand.Seed(time.Now().UnixNano())
-	text := "ただ今 " + stations[rand.Intn(len(stations))] + " 付近を通過中"
-	return text
+	passingStation := stations[rand.Intn(len(stations))]
+	currentTime := time.Now().Format("2006-01-02 15:04:05")
+
+	tweetText := fmt.Sprintf("ただ今　%s　付近を通過中　\n[%s]", passingStation, currentTime)
+	return tweetText
 }
