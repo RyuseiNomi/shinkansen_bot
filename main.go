@@ -3,12 +3,13 @@ package main
 import (
 	"log"
 
-	keys "./keys"
-	text "./text"
+	"github.com/aws/aws-lambda-go/lambda"
+
+	keys "github.com/RyuseiNomi/shinkansen_bot/keys"
+	text "github.com/RyuseiNomi/shinkansen_bot/text"
 )
 
-func main() {
-
+func Tweet() {
 	text := text.GetTweetText()
 	api := keys.GetApiWithCredentials()
 
@@ -18,4 +19,8 @@ func main() {
 	}
 
 	log.Print("the tweet posted! Contents:" + tweet.Text)
+}
+
+func main() {
+	lambda.Start(Tweet)
 }
