@@ -4,4 +4,4 @@
 
 30分に1回どこかの駅を通過する新幹線botです。
 
-![IMG_9131](/Users/Ryusei/go/src/github.com/RyuseiNomi/shinkansen_bot/IMG_9131.PNG)
+![IMG_9131](./IMG_9131.PNG)
